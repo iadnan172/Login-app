@@ -1,64 +1,68 @@
-# Bootstrap 5 Login Page 
+# Login Application
 
-[![GitHub license](https://img.shields.io/github/license/nauvalazhar/my-login.svg)](https://github.com/nauvalazhar/bootstrap-5-login-page/blob/master/LICENSE)
-![Author](https://img.shields.io/badge/author-%40nauvalazhar-blue.svg)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/nauvalazhar/bootstrap-5-login-page/.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fnauvalazhar%2Fbootstrap-5-login-page%2F)
+This project is a simple Login Application with three core pages and is containerized using Docker. Kubernetes is also configured for deploying the application.
 
-This is a Bootstrap 5 Login Page template, you can use it as you wish and it's free for personal or commercial use.
+## Pages Included:
+1. **Login Page**: Allows users to authenticate.
+2. **Registration Page**: Enables new users to sign up.
+3. **Forget Password Page**: Helps users reset their passwords.
 
-<div align="center">
-<img src="https://i.ibb.co/pfbd8TS/Screenshot-2021-03-06-Bootstrap-5-Login-Page-2.png">
-<img src="https://i.ibb.co/CQsJsBT/Screenshot-1.png">
-</div>
+## Features:
+- The application is containerized using Docker and orchestrated using Docker Compose.
+- Kubernetes is set up with namespaces, deployments, and services for managing the application.
 
-# Installation
-Let's make it easy! Just download this template, use it on your project.
+## Project Setup:
 
-# Demo
-- [Login](https://nauvalazhar.github.io/bootstrap-5-login-page/index.html)
-- [Register](https://nauvalazhar.github.io/bootstrap-5-login-page/register.html)
-- [Forgot Password](https://nauvalazhar.github.io/bootstrap-5-login-page/forgot.html)
-- [Reset Password](https://nauvalazhar.github.io/bootstrap-5-login-page/reset.html)
+### Docker Configuration:
+- The application is containerized and runs on port **3000**.
+- Docker Compose is used to manage multi-container setups.
 
-# Features
-- Bootstrap 5 (Beta 2)
-- Bootstrap 5 Validation
-- Verified by W3C
-- 4 Pages included (Login, Register, Forgot Password, Reset Password)
-- No custom classes 
-- Easy to use
-- Cross-browser compatibility (Chrome, Firefox, Opera, IE11, Safari)
-- Fully responsive
-- and more ...
+### Kubernetes Configuration:
+- A namespace is created to isolate the application resources.
+- Deployment and service files are configured to deploy the application within a Kubernetes cluster.
+- The application is accessible on **localhost**.
 
-# Report Some Bugs
-Find a Bug? Please, [create an issue](https://github.com/nauvalazhar/bootstrap-5-login-page/issues) and we'll fix it together for a better template.
+## How to Run:
 
-# Contribution
-Contribution are always welcome and recommended! Here is how:
+### Using Docker:
+1. Build the Docker image:
+   ```bash
+   docker build -t login-app .
+   ```
+2. Run the Docker container:
+   ```bash
+   docker-compose up
+   ```
 
-- Fork the repository ([here is the guide](https://help.github.com/articles/fork-a-repo/)).
-- Clone to your machine git clone https://github.com/YOUR_USERNAME/bootstrap-5-login-page.git
-- Make your changes
-- Create a pull request
+### Using Kubernetes:
+1. Apply the namespace:
+   ```bash
+   kubectl apply -f namespace.yaml
+   ```
+2. Deploy the application:
+   ```bash
+   kubectl apply -f deployment.yaml
+   ```
+3. Expose the service:
+   ```bash
+   kubectl apply -f service.yaml
+   ```
+4. Access the application via **localhost**.
 
-# Changelogs
-### Mar 06, 2021
-  - **Initial release for Bootstrap 5 version**
-### Aug 29, 2017
-  - **Initial release for BOotstrap 4 version ([see here](https://github.com/nauvalazhar/bootstrap-4-login-page))**
+## Technology Stack:
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Node.js
+- **Database**: MySQL
+- **Containerization**: Docker, Docker Compose
+- **Orchestration**: Kubernetes
 
-# Looking For a Free Admin Template?
-Stisla is waiting for you. [Download now](https://getstisla.com).
+## Ports:
+- Application runs on **port 3000** in the Docker container.
+- Kubernetes service maps the application to **localhost**.
 
-[![Stisla Preview](https://getstisla.com/landing/stisla-share.png)](https://getstisla.com)
+## Future Enhancements:
+- Add advanced user management features.
+- Implement CI/CD pipelines for seamless updates.
 
-
-# Buy me a Coffee
-Support me :) http://buymeacoff.ee/mhdnauvalazhar
-
-# License
-[MIT License](http://opensource.org/licenses/MIT)
-
----
-<div align="center">Have a good day! ❤️</div>
+## Author:
+[Adnan Pathan]

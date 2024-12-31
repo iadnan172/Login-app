@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: js-login-app
+  namespace: login-app
+  labels:
+    app: js-login-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: js-login-app
+  template:
+    metadata:
+      labels:
+        app: js-login-app
+    spec:
+      containers:
+      - name: js-login-app
+        image: adnan079/login-app:latest
+        ports:
+        - containerPort: 3000
+
